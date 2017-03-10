@@ -22,6 +22,10 @@ $(document).ready(function(){
 		$(".wode").hide();
 		$(".zini1").hide();
 		$(".wode1").hide();
+		$(".protocol").hide();
+		$(".thesistitle").hide();
+		$(".manage").hide();
+		
 	});
 	$('.navigation button').eq(3).click(function(){
 		$(".selectstudent").show();
@@ -29,6 +33,10 @@ $(document).ready(function(){
 		$(".wode").hide();
 		$(".zini1").show();
 		$(".wode1").hide();
+		$(".protocol").hide();
+		$(".thesistitle").hide();
+		$(".manage").hide();
+		
 	});
 	
 	$('.navigation button').eq(4).click(function(){
@@ -40,6 +48,10 @@ $(document).ready(function(){
 		$(".zini").hide();
 		$(".wode1").hide();
 		$(".zini1").hide();
+		$(".protocol").hide();
+		$(".thesistitle").hide();
+		$(".manage").hide();
+		
 	});
 	$('.navigation button').eq(6).click(function(){
 		$(".selectstudent").show();
@@ -47,6 +59,10 @@ $(document).ready(function(){
 		$(".wode").hide();
 		$(".zini").hide();
 		$(".wode1").show();
+		$(".protocol").hide();
+		$(".thesistitle").hide();
+		$(".manage").hide();
+		
 	});
 	$('.navigation button').eq(7).click(function(){
 		$("#topic1").toggle(200);
@@ -59,7 +75,7 @@ $(document).ready(function(){
 		$(".deletestudent").hide();
 		$(".selectstudent").hide();
 		$(".protocol").hide();
-	$(".thesistitle").hide();
+		$(".thesistitle").hide();
 		
 	});
 	$('.navigation button').eq(9).click(function(){
@@ -101,8 +117,44 @@ $(document).ready(function(){
 	setInterval("startRequest()",1000); 
 
 	//触发分页的代码
-	 $(".tcdPageCode").createPage({
+	 $(".tcdPageCode").createPage({//总课题下的分页
         pageCount:10,//一共有多少页
+        current:1,//当前页
+        backFn:function(p){
+            console.log(p);
+        }
+    });
+    
+     $(".tcdPageCode1").createPage({//自拟课题未选学生的分页
+        pageCount:13,//一共有多少页
+        current:1,//当前页
+        backFn:function(p){
+            console.log(p);
+        }
+    });
+    $(".tcdPageCode2").createPage({//自拟课题已选学生的分页
+        pageCount:5,//一共有多少页
+        current:1,//当前页
+        backFn:function(p){
+            console.log(p);
+        }
+    });
+    $(".tcdPageCode3").createPage({//我拟课题未选学生的分页
+        pageCount:6,//一共有多少页
+        current:1,//当前页
+        backFn:function(p){
+            console.log(p);
+        }
+    });
+    $(".tcdPageCode4").createPage({//我拟课题已选学生的分页
+        pageCount:8,//一共有多少页
+        current:1,//当前页
+        backFn:function(p){
+            console.log(p);
+        }
+    });
+    $(".tcdPageCode5").createPage({//审题页面的分页
+        pageCount:9,//一共有多少页
         current:1,//当前页
         backFn:function(p){
             console.log(p);
