@@ -26,13 +26,32 @@
 				/*opacity: 0.7;*/
 				border-radius: 10%;
 				}
-			.title,.source,.pass{
+				.title{
+				width: 80%;
+				height: 10%;
+				padding-top: 1%;
+				padding-left: 14%;
+				}
+			.source,.pass{
 				width: 80%;
 				height: 6%;
 				padding-top: 1%;
 				padding-left: 14%;
 			}
-			.title2,.source2{
+			.title1{
+				width:35%;
+				height: 100%;
+				float: left;
+			}
+			.title2{
+				width: 65%;
+				height: 100%;
+				float: right;
+				word-wrap:break-word; 
+				word-break:break-all; 
+				overflow: hidden;
+			}
+			.source2{
 				padding-left: 20%;
 			}
 			.introduction,.suggest{
@@ -85,26 +104,7 @@
 	<body>
 		<div class="style1">
 			<div class="style2">
-				<div class="title">
-					<span class="title1">课题标题:</span>
-					<span class="title2">xxxxxxxxx</span>
-				</div>
-				<div class="source">
-					<span class="source1">课题来源:</span>
-					<span class="source2">学生自拟</span>
-				</div>
-				<div class="source">
-					<span class="source1">课题类型:</span>
-					<span class="source2">应用研究型</span>
-				</div>
-				<div class="source">
-					<span class="source1">选择导师:</span>
-					<span class="source2">xxxxx</span>
-				</div>
-				<div class="source">
-					<span class="source1">通过/总数:</span>
-					<span class="source2">0/5</span>
-				</div>
+
 				
 				<div class="introduction">
 					<span class="introduction2">课题介绍：</span>
@@ -124,7 +124,7 @@
 					<textarea class="suggest2"></textarea>
 				</div>
 				<div class="pass">
-					<span class="title1">是否通过:</span>
+					<span class="source1">是否通过:</span>
 					<span class="pass2"><select name="passornot" class="form-control">
 						<option value="pass">通过</option>
 						<option value="failure">建议再修改</option>
