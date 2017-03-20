@@ -71,6 +71,7 @@ $(document).ready(function(){
 	$('.navigation button').eq(8).click(function(){
 		$(".manage").show()
 		$(".allofthetopic").show();
+		$(".allofthetopic1").hide();
 		$(".deletetopic").hide();
 		$(".deletestudent").hide();
 		$(".selectstudent").hide();
@@ -80,32 +81,45 @@ $(document).ready(function(){
 	});
 	$('.navigation button').eq(9).click(function(){
 		$(".manage").show()
+		$(".allofthetopic1").show();
+		$(".allofthetopic").hide();
+		$(".deletetopic").hide();
+		$(".deletestudent").hide();
+		$(".selectstudent").hide();
+		$(".protocol").hide();
+		$(".thesistitle").hide();
+		
+	});
+	$('.navigation button').eq(10).click(function(){
+		$(".manage").show()
 		$(".deletestudent").show();
 		$(".allofthetopic").hide();
+		$(".allofthetopic1").hide();
 		$(".deletetopic").hide();
 		$(".selectstudent").hide();
 		$(".protocol").hide();
 	$(".thesistitle").hide();
 		
 	});
-	$('.navigation button').eq(10).click(function(){
+	$('.navigation button').eq(11).click(function(){
 		$(".manage").show()
 		$(".deletetopic").show();
 		$(".allofthetopic").hide();
+		$(".allofthetopic1").hide();
 		$(".deletestudent").hide();
 		$(".selectstudent").hide();
 		$(".protocol").hide();
 	$(".thesistitle").hide();
 		
 	});
-	$('.navigation button').eq(11).click(function(){
+	$('.navigation button').eq(12).click(function(){
 		$(".selectstudent").hide();
 		$(".manage").hide();
 		$(".protocol").show();
 		$(".thesistitle").hide();
 		
 	});
-	$(".navigation button").eq(12).click(function(){
+	$(".navigation button").eq(13).click(function(){
 		$(".selectstudent").hide();
 		$(".manage").hide();
 		$(".protocol").hide();
@@ -153,8 +167,10 @@ $(document).ready(function(){
             console.log(p);
         }
     });
-    $(".tcdPageCode5").createPage({//审题页面的分页
-        pageCount:9,//一共有多少页
+//  var px=60;
+    $(".tcdPageCode5").createPage({
+    	//审题页面的分页
+        pageCount:6,//一共有多少页
         current:1,//当前页
         backFn:function(p){
             console.log(p);
