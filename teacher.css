@@ -9,9 +9,18 @@ body{
 	overflow: hidden;
 	word-wrap: break-word;
 	word-break: break-all;
+	overflow-y: scroll;
 }
 
 * a{
+	text-decoration: none;
+}
+ a{
+	color: #66512C;
+	text-decoration: none;
+}
+a:hover{
+	color: #A94442;
 	text-decoration: none;
 }
 * li{
@@ -178,13 +187,19 @@ header{
 	height: 100%;
 	
 }
+.selectstudent tr:hover{
+	background-color: #F2DEDE;
+}
+.thesistitle tr:hover{
+	background-color: #F9F2F4;
+}
 #liebiao1,#liebiao2{
 	display: none;
 }
 .zini,.zini1,.wode,.wode1{
 	width: 100%;
 	height: 100%;
-	padding: 5% 5% 5% 15%;
+	padding: 5% 5% 5% 20%;
 	
 	/*background-color: #EBCCCC;*/
 }
@@ -314,8 +329,11 @@ header{
 	text-decoration: none;
 }
 .topic2 a:hover{
-	color: #fff;
+	color: #A94442;
 	text-decoration: none;
+}
+.topic1 tr:hover,.topic2 tr:hover{
+	background-color: #F1F1F1
 }
 .tcdPageCode,.tcdPageCode1,.tcdPageCode2,.tcdPageCode3,.tcdPageCode4,.tcdPageCode5{
 	padding: 15px 20px;
@@ -395,11 +413,17 @@ header{
 	border-bottom: 0.5px solid #C0C0C0;
 	padding-top: 7%;
 }
+.delete1 tr:hover{
+	background-color: #CCCCCC;
+}
 .btn-gr1{
 	padding-top: 5%;
 	padding-left: 20%;
 }
-
+.btn-gr2{
+	padding-top: 5%;
+	padding-left: 35%;
+}
 .deletestudent{
 	width: 100%;
 	height: 100%;
