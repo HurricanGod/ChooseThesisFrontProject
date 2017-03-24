@@ -115,7 +115,7 @@ $(document).ready(function(){
 	});
 
 	
-	//设置自动刷新时间函数每隔一秒就刷新
+	//设置自动刷新时间函数每隔一秒就刷新1
 	setInterval("startRequest()",1000); 
 
 	//触发分页的代码
