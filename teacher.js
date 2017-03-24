@@ -9,6 +9,7 @@ $(document).ready(function(){
 	$(".manage").hide();
 	$(".protocol").hide();
 	$(".thesistitle").hide();
+	$(".times").show();
 	//当父菜单被点击的时候就显示或者隐藏
 	$('.navigation button').eq(0).click(function(){
 		$("#student1").toggle(200);
@@ -72,7 +73,6 @@ $(document).ready(function(){
 		$(".manage").show()
 		$(".allofthetopic").show();
 		$(".allofthetopic1").hide();
-		$(".deletetopic").hide();
 		$(".deletestudent").hide();
 		$(".selectstudent").hide();
 		$(".protocol").hide();
@@ -83,7 +83,6 @@ $(document).ready(function(){
 		$(".manage").show()
 		$(".allofthetopic1").show();
 		$(".allofthetopic").hide();
-		$(".deletetopic").hide();
 		$(".deletestudent").hide();
 		$(".selectstudent").hide();
 		$(".protocol").hide();
@@ -95,31 +94,20 @@ $(document).ready(function(){
 		$(".deletestudent").show();
 		$(".allofthetopic").hide();
 		$(".allofthetopic1").hide();
-		$(".deletetopic").hide();
 		$(".selectstudent").hide();
 		$(".protocol").hide();
 	$(".thesistitle").hide();
 		
 	});
+	
 	$('.navigation button').eq(11).click(function(){
-		$(".manage").show()
-		$(".deletetopic").show();
-		$(".allofthetopic").hide();
-		$(".allofthetopic1").hide();
-		$(".deletestudent").hide();
-		$(".selectstudent").hide();
-		$(".protocol").hide();
-	$(".thesistitle").hide();
-		
-	});
-	$('.navigation button').eq(12).click(function(){
 		$(".selectstudent").hide();
 		$(".manage").hide();
 		$(".protocol").show();
 		$(".thesistitle").hide();
 		
 	});
-	$(".navigation button").eq(13).click(function(){
+	$(".navigation button").eq(12).click(function(){
 		$(".selectstudent").hide();
 		$(".manage").hide();
 		$(".protocol").hide();
