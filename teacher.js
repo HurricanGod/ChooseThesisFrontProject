@@ -74,7 +74,6 @@ $(document).ready(function(){
 		$(".allofthetopic").show();
 		$(".allofthetopic1").hide();
 		$(".deletestudent").hide();
-		$(".deletetopic").hide();
 		$(".selectstudent").hide();
 		$(".protocol").hide();
 		$(".thesistitle").hide();
@@ -85,8 +84,6 @@ $(document).ready(function(){
 		$(".allofthetopic1").show();
 		$(".allofthetopic").hide();
 		$(".deletestudent").hide();
-		$(".deletetopic").hide();
-		
 		$(".selectstudent").hide();
 		$(".protocol").hide();
 		$(".thesistitle").hide();
@@ -95,8 +92,6 @@ $(document).ready(function(){
 	$('.navigation button').eq(10).click(function(){
 		$(".manage").show()
 		$(".deletestudent").show();
-		$(".deletetopic").hide();
-		
 		$(".allofthetopic").hide();
 		$(".allofthetopic1").hide();
 		$(".selectstudent").hide();
@@ -104,26 +99,16 @@ $(document).ready(function(){
 	$(".thesistitle").hide();
 		
 	});
-	$('.navigation button').eq(11).click(function(){
-		$(".manage").show()
-		$(".deletestudent").hide();
-		$(".deletetopic").show();
-		$(".allofthetopic").hide();
-		$(".allofthetopic1").hide();
-		$(".selectstudent").hide();
-		$(".protocol").hide();
-	$(".thesistitle").hide();
-		
-	});
+
 	
-	$('.navigation button').eq(12).click(function(){
+	$('.navigation button').eq(11).click(function(){
 		$(".selectstudent").hide();
 		$(".manage").hide();
 		$(".protocol").show();
 		$(".thesistitle").hide();
 		
 	});
-	$(".navigation button").eq(13).click(function(){
+	$(".navigation button").eq(12).click(function(){
 		$(".selectstudent").hide();
 		$(".manage").hide();
 		$(".protocol").hide();
