@@ -40,10 +40,7 @@
 				input,select,textarea{
 					display: none;
 				}
-				textarea{
-					overflow-y:scroll ;
-					height: auto
-				}
+				
 				#thesis table td:nth-child(1){
 					width:32%;
 					text-align: right;
@@ -51,6 +48,20 @@
 				}
 				#thesis table td:nth-child(2){
 					text-align: center;
+				}
+				tr:last-child{
+					height: 200px;
+					overflow-y:scroll ;
+					
+				}
+				textarea{
+					height: 100%;
+					columns: lightgray;
+					overflow-y:scroll ;
+					height: auto
+				}
+				#name,#type{
+					width: 50%;
 				}
 				.but{
 					padding-left: 40%;
@@ -65,17 +76,20 @@
 	    		<div id="thesis-content">
 	    		<form method="post" action="#" id="myform">
 	    			<table class="table">
-	    			<tr><td>论题名称：</td><td><span id="myname">移动应用开发</span> <input  id="name" class="form-control" type="text"  /> </td></tr>
+	    			<tr><td>论题名称：</td><td><span id="myname">移动应用开发</span> <input  id="name" class="form-control" type="text" value=""  /> </td></tr>
 	    			<tr><td>审核状态：</td><td>已通过审核</td></tr>
-	    			<tr><td>论题类型：</td><td><span id="mytype">移动应用开发</span> <select  id="type" name="type" class="form-control"><option value="1">1</option><option value="2">2</option></select> </td></tr>
+	    			<tr><td>论题类型：</td><td><span id="mytype">移动应用开发</span> <select  id="type" name="type" class="form-control"><option value="1">移动应用开发</option><option value="2">基础应用开发</option></select> </td></tr>
 	    			<tr><td>指导老师意见：</td>
 	    				<td>
 	    					<p>1.在应用环境中设计、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短消</p>
 	    					<p>2.在应用环境中设计、建立和集成SMS333333333333333333333333333333333消</p>
 	    					<p>3.在应用环境中设计、建立和集成SMS444444444444444444444444444444短消</p>
 	    					<p>4.在应用环境中设计、建立和集成SMS45555555555555555555555555555555555555555短消</p>
+	    					<p>1.在应用环境中设计、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短消</p>
+	    					<p>1.在应用环境中设计、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短、建立和集成SMS短消</p>
+	    					
 	    				</td></tr>
-	    			<tr><td>论题内容：</td><td><textarea  id="content" class="form-control"></textarea><div id="mycontent">如何在应用环境中设计、建立和集成SMS短消息应用；如何创建能够充分利用SIM卡功能的代码；如何在3G电话中使用微浏览器和微Web服务器</div></td></tr>
+	    			<tr><td>论题内容：</td><td><textarea  id="content" class="form-control" cols="5" rows="10"></textarea><div id="mycontent">如何在应用环境中设计、建立和集成SMS短消息应用；如何创建能够充分利用SIM卡功能的代码；如何在3G电话中使用微浏览器和微Web服务器</div></td></tr>
 	    		</table>
 	    		</form>
 	    		</div>
@@ -88,12 +102,13 @@
 	    	</div>
 	</body>
 	<script>
-	//跳转回教师页面
+	
 	$(document).ready(function(){
 			$("input").hide();
 			$("select").hide();
 			$("textarea").hide();
 	});
+	//跳转回教师页面
 		$("button").eq(0).click(function(){
 			location.href="../teacher.html"
 		});
@@ -104,9 +119,15 @@
 		});
 		//修改课题
 		$("#change").click(function(){
+			//默认值为原来的值
+			document.getElementById("name").value=$("#myname").html();
+			document.getElementById("type").value=$("#mytype").html();
+			document.getElementById("content").value=$("#mycontent").html();
+			
 			$("#submit,input,textarea,select").show();
-			$("#mycontent").empty();	//清空原来的值
 			$("span").empty();
+			$("#mycontent").empty();	//清空原来的值
+			
 		});
 		
 		//确认提交
