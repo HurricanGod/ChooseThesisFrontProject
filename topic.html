@@ -65,7 +65,7 @@
 	    		<div id="thesis-content">
 	    		<form method="post" action="#" id="myform">
 	    			<table class="table">
-	    			<tr><td>论题名称：</td><td><span id="myname">移动应用开发</span> <input  id="name" class="form-control" type="text"  value=" +myname+"/> </td></tr>
+	    			<tr><td>论题名称：</td><td><span id="myname">移动应用开发</span> <input  id="name" class="form-control" type="text"  /> </td></tr>
 	    			<tr><td>审核状态：</td><td>已通过审核</td></tr>
 	    			<tr><td>论题类型：</td><td><span id="mytype">移动应用开发</span> <select  id="type" name="type" class="form-control"><option value="1">1</option><option value="2">2</option></select> </td></tr>
 	    			<tr><td>指导老师意见：</td>
@@ -113,7 +113,7 @@
 		$("#submit").click(function(){
 			if (window.confirm("确认吗?")) {//确认修改就提交表单
 				//提交表单				
-//				$("#myform").submit();
+				$("#myform").submit();
 
 				//将input的新值显示在原来的位置上
 				var mynewname = document.getElementById("name");
@@ -126,7 +126,7 @@
 				
 				var mynewcontent = document.getElementById("content");
 				var newcontent = document.getElementById("mycontent");
-				newname.innerHTML=mynewname.value;
+				newcontent.innerHTML=mynewcontent.value;
 				
 				$("#submit,input,textarea,select").hide();
 				
