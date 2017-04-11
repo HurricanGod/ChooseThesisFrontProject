@@ -11,6 +11,13 @@
 			body{
 				background-color: #f4fffb;
 			}
+			.select{
+				height: 10%;
+				padding: 3% 0;
+			}
+			.select div{
+				padding: 0 25%;
+			}
 			#selects-content{
 				width: 75%;
 			}
@@ -39,6 +46,13 @@
 		</style>
 	</head>
 	<body>
+		<div class="select">
+			<div class="btn-group">
+				<button class="btn btn-default"><span class="glyphicon"></span>未选</button>
+				<button class="btn btn-default" id="btn2"> <span id="span2" class="glyphicon"></span>已被选择</button>
+				
+			</div>
+		</div>
 			<div id="selects-content">
 	    		<form action="#" method="post" role="form">
 	    			<table>
@@ -60,4 +74,31 @@
 	    		</form>
 	    	</div>
 	</body>
+	<script type="text/javascript" src="../js/jquery.js" ></script>
+	<script type="text/javascript">
+		
+		$.ajax({
+			type:"post",
+			url:"#",
+			async:"true",
+			success:function isChoosef(isChoose){
+				if(isChoose==true){
+					$("button:first-child").addClass("btn-danger");
+					$("span:first-child").addClass("glyphicon-ok");
+					$("#span2").addClass("glyphicon-remove");
+				}else if(isChoose==false){
+					$("#btn2").addClass("btn-danger");
+					$("#span2").addClass("glyphicon-ok");
+					$("span:first-child").addClass("glyphicon-remove");
+					
+				}
+			}
+		});
+		
+	
+		
+	
+		
+		
+	</script>
 </html>
